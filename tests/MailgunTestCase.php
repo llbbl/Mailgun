@@ -14,7 +14,7 @@ class MailgunTestCase extends TestCase
     /**
      * Setup the test environment.
      */
-    public function setUp()
+    public function setUp(): void
     {
         parent::setUp();
 
@@ -31,7 +31,7 @@ class MailgunTestCase extends TestCase
         $this->app->instance('Mailgun\Mailgun', $this->mailgunApi);
     }
 
-    public function tearDown()
+    public function tearDown(): void
     {
         parent::tearDown();
         if ($container = Mockery::getContainer()) {
